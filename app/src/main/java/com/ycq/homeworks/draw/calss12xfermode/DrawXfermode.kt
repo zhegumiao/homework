@@ -11,6 +11,7 @@ import com.ycq.homeworks.R
 import com.ycq.homeworks.util.decodeSampledBitmapFromResource
 import com.ycq.homeworks.util.dp
 import com.ycq.homeworks.util.dpInt
+import com.ycq.homeworks.util.getAvatar
 import kotlin.math.cos
 import kotlin.math.sin
 
@@ -26,15 +27,7 @@ class DrawXfermode(context: Context?, attrs: AttributeSet?) :
     private var centerX: Int = 0
     private var centerY: Int = 0
 
-    fun getAvatar(): Drawable{
-        return context.resources.getDrawable(R.drawable.panda)
-    }
-    fun getAvatar(size: Int): Bitmap{
-        return decodeSampledBitmapFromResource(context.resources, R.drawable.panda,
-            size.dpInt, size.dpInt
-        )
-    }
-    private val bitmap = getAvatar(200)
+    private val bitmap = getAvatar(200.dpInt)
 
     private val paint =  Paint(Paint.ANTI_ALIAS_FLAG)
     private val mXfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP)

@@ -1,8 +1,12 @@
 package com.ycq.homeworks.util
 
+import android.content.Context
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.Drawable
+import android.view.View
+import com.ycq.homeworks.R
 
 public val Int.dp : Float
     get() = this * Resources.getSystem().displayMetrics.density
@@ -11,6 +15,15 @@ public val Int.dpInt : Int
 
 public val Float.dp : Float
     get() = this * Resources.getSystem().displayMetrics.density
+
+fun View.getAvatar(): Drawable {
+    return this.resources.getDrawable(R.drawable.panda)
+}
+fun View.getAvatar(size: Int): Bitmap{
+    return decodeSampledBitmapFromResource(this.resources, R.drawable.panda,
+        size, size
+    )
+}
 
 fun decodeSampledBitmapFromResource(
     res: Resources,

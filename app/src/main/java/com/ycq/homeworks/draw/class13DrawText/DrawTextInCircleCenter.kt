@@ -17,7 +17,7 @@ class DrawTextInCircleCenter(context: Context?, attrs: AttributeSet?) : View(con
     private val startAngle = 150f
     private val sweepAngle = 240f
 
-    private val text = "AbcdgGF"
+    private val text = "Abcd中国"
     private val tSize = 40.dp
     private var adCenter = 0f
     private var ascent = 0f

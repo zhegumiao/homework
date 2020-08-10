@@ -45,18 +45,17 @@ class DrawAnimatorChangeString(context: Context?, attrs: AttributeSet?) :
 
     private val evaluator = object : TypeEvaluator<String>{
         override fun evaluate(fraction: Float, startValue: String, endValue: String): String {
-            val array = Array<String>(20) {
-                "$it"
-            }
-            val startIndex = array.indexOf(startValue)
-            val endIndex = array.indexOf(endValue)
-            val s = array[(startIndex + (endIndex - startIndex) * fraction).toInt()]
+
+            val startIndex = startValue.toCharArray().first()
+            val endIndex = endValue.toCharArray().first()
+            val s = startIndex + (((endIndex - startIndex) * fraction).toInt())
             return "$s$s$s$s"
         }
     }
 
+
     private val animator = ObjectAnimator.ofObject(this,  "text",evaluator,
-        "3", "19" )
+        "A", "z" )
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()

@@ -19,6 +19,13 @@ public val Float.dp : Float
 fun View.getAvatar(): Drawable {
     return this.resources.getDrawable(R.drawable.panda)
 }
+
+fun Context.getAvatar(size: Int): Bitmap{
+    return decodeSampledBitmapFromResource(this.resources, R.drawable.panda,
+        size, size
+    )
+}
+
 fun View.getAvatar(size: Int): Bitmap{
     return decodeSampledBitmapFromResource(this.resources, R.drawable.panda,
         size, size

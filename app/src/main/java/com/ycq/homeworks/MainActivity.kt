@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        button?.setOnClickListener {
-            startActivity(Intent(this, FragActivity::class.java))
-        }
+//        button?.setOnClickListener {
+//            startActivity(Intent(this, FragActivity::class.java))
+//        }
 
     }
 }

@@ -4,9 +4,11 @@ import android.content.Context
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.view.View
 import com.ycq.homeworks.R
+import kotlin.random.Random
 
 public val Int.dp : Float
     get() = this * Resources.getSystem().displayMetrics.density
@@ -71,4 +73,17 @@ fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeig
     }
 
     return inSampleSize
+}
+
+val rnd = Random(System.currentTimeMillis())
+
+/**
+ * @return @ColorInt
+ */
+fun getRandomColor(): Int {
+    return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+}
+
+fun getRandomInt(util: Int): Int {
+    return rnd.nextInt(util)
 }

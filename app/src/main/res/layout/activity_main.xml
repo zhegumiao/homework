@@ -7,6 +7,11 @@
     tools:context=".MainActivity"
     android:background="@color/color_gray"
     >
+    <com.ycq.homeworks.draw.class20Layout.TagLayoutViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.ycq.homeworks.draw.class20Layout.TagLayoutViewGroup>
 
 <!--    <com.ycq.homeworks.draw.class19Measure.SquareImageView-->
 <!--        android:layout_width="150dp"-->
@@ -16,15 +21,15 @@
 <!--        android:elevation="10dp"-->
 <!--        android:background="@color/color_gray"-->
 <!--        />-->
-    <com.ycq.homeworks.draw.class19Measure.CustomViewLayoutSizeView
-        android:layout_width="150dp"
-        android:layout_height="300dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:elevation="10dp"
-        />
+<!--    <com.ycq.homeworks.draw.class19Measure.CustomViewLayoutSizeView-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="300dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:elevation="10dp"-->
+<!--        />-->
 
 <!--    <Button-->
 <!--        android:id="@+id/button"-->

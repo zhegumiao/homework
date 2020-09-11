@@ -13,7 +13,7 @@ import kotlin.random.Random
 public val Int.dp : Float
     get() = this * Resources.getSystem().displayMetrics.density
 public val Int.dpInt : Int
-    get() = this * Resources.getSystem().displayMetrics.density.toInt()
+    get() = (this * Resources.getSystem().displayMetrics.density).toInt()
 
 public val Float.dp : Float
     get() = this * Resources.getSystem().displayMetrics.density

@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
+import android.view.HapticFeedbackConstants
 import android.view.MotionEvent
 import android.view.View
 import com.ycq.homeworks.util.dp
@@ -31,6 +32,15 @@ class ValuesSelectView(context: Context?, attrs: AttributeSet?) :
     private val itemRangeList = ArrayList<ClosedFloatingPointRange<Float>>()
 
     private var currentIndex = 1
+        set(value) {
+            if (field != value) {
+                field = value
+                calSelectorRectF()
+                invalidate()
+                performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
+
+            }
+        }
     private var stepSize = 0
     private var heightCenter = 0f
 
@@ -91,8 +101,6 @@ class ValuesSelectView(context: Context?, attrs: AttributeSet?) :
             else -> {
                 // 算出最近的 item 的 index
                 currentIndex = getNearItemIndex(event.x)
-                calSelectorRectF()
-                invalidate()
             }
         }
 

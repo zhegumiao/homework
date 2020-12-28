@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- 正文左右间距 -->
+    <dimen name="reader_horizontal_padding">21dp</dimen>
+    <!-- 正文上下间距 -->
+    <dimen name="reader_vertical_padding">15dp</dimen>
+
+<!--    虚拟章节 padding top-->
+    <dimen name="reader_virtual_chapter_header_height">60dp</dimen>
+<!--  如 meta chapter   -->
+    <dimen name="vertical_reader_virtual_chapter_margin_height">150dp</dimen>
+    <dimen name="vertical_reader_chapter_last_page_margin_height">100dp</dimen>
+    <dimen name="vertical_reader_page_break_height">150dp</dimen>
+
+    <!-- 页眉高度 title 上面那一部分-->
+    <dimen name="reader_header_height">25dp</dimen>
+    <!--页脚高度-->
+    <dimen name="reader_footer_height">25dp</dimen>
+    <dimen name="reader_footer_vertical_padding_height">5dp</dimen>
+
+    <!-- 页眉文字大小 -->
+    <dimen name="font_size_reader_header">12dp</dimen>
+    <dimen name="font_size_reader_bookmark_page">8dp</dimen>
+
+    <!-- 正文字体大小 -->
+    <array name="font_size_content">
+        <item>15dp</item>
+        <item>17dp</item>
+        <item>19dp</item>
+        <item>21dp</item>
+        <item>23dp</item>
+        <item>25dp</item>
+        <item>28dp</item>
+        <item>31dp</item>
+        <item>34dp</item>
+        <item>38dp</item>
+        <item>42dp</item>
+        <item>48dp</item>
+    </array>
+
+    <!-- 正文行高 标准 * 0.8 -->
+    <array name="line_height_content_small">
+        <item>12dp</item>
+        <item>14dp</item>
+        <item>15dp</item>
+        <item>17dp</item>
+        <item>18dp</item>
+        <item>20dp</item>
+        <item>22dp</item>
+        <item>25dp</item>
+        <item>27dp</item>
+        <item>30dp</item>
+        <item>34dp</item>
+        <item>38dp</item>
+    </array>
+
+    <!-- 正文行高 标准-->
+    <array name="line_height_content">
+        <item>30dp</item>
+        <item>34dp</item>
+        <item>36dp</item>
+        <item>40dp</item>
+        <item>43dp</item>
+        <item>47dp</item>
+        <item>50dp</item>
+        <item>55dp</item>
+        <item>61dp</item>
+        <item>68dp</item>
+        <item>75dp</item>
+        <item>86dp</item>
+    </array>
+
+    <!-- 正文行高 标准 * 1.3 -->
+    <array name="line_height_content_large">
+        <item>20dp</item>
+        <item>22dp</item>
+        <item>25dp</item>
+        <item>27dp</item>
+        <item>30dp</item>
+        <item>33dp</item>
+        <item>36dp</item>
+        <item>40dp</item>
+        <item>44dp</item>
+        <item>49dp</item>
+        <item>55dp</item>
+        <item>62dp</item>
+    </array>
+
+    <!-- 图注字体大小 -->
+    <array name="font_size_legend">
+        <item>12dp</item>
+        <item>12dp</item>
+        <item>12dp</item>
+        <item>14dp</item>
+        <item>14dp</item>
+        <item>14dp</item>
+        <item>16dp</item>
+        <item>16dp</item>
+        <item>16dp</item>
+        <item>18dp</item>
+        <item>18dp</item>
+        <item>18dp</item>
+    </array>
+
+    <!-- 图注行高 = 图注字体大小 * 1.5    -->
+    <array name="line_height_legend">
+        <item>18dp</item>
+        <item>18dp</item>
+        <item>18dp</item>
+        <item>21dp</item>
+        <item>21dp</item>
+        <item>21dp</item>
+        <item>24dp</item>
+        <item>24dp</item>
+        <item>24dp</item>
+        <item>27dp</item>
+        <item>27dp</item>
+        <item>27dp</item>
+    </array>
+</resources>

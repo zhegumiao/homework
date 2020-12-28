@@ -1,4 +1,4 @@
-package com.ycq.homeworks.draw.class11
+package com.ycq.homeworks.draw.views
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,7 +8,6 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import androidx.annotation.FloatRange
 import com.ycq.homeworks.util.dp
 
 /**

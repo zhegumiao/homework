@@ -31,11 +31,11 @@
 <!--        android:elevation="10dp"-->
 <!--        />-->
 
-<!--    <Button-->
-<!--        android:id="@+id/button"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="40dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        android:text="fragment"-->
-<!--        />-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="fragment"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

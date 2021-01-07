@@ -17,7 +17,7 @@ class TestFragmentActivity: FragmentActivity() {
             supportFragmentManager.apply {
                 val transaction = beginTransaction()
                 transaction.add(R.id.frag_activity_root,
-                    TextViewParagraphSpaceFragment(), null)
+                        WindowFragment(), null)
                 transaction.commit()
             }
         }

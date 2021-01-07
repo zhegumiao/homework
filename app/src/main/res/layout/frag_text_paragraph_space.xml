@@ -7,7 +7,7 @@
     >
    <com.ycq.homeworks.views.TextView
        android:id="@+id/text"
-       android:textSize="30sp"
+       android:textSize="40dp"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

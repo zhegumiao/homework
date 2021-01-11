@@ -71,18 +71,18 @@ class TextViewParagraphSpaceFragment : Fragment() {
         // fixme 非常诡异的现象
         val text = "Text is\nspantastic\nspantastic"
         val spannable = SpannableString(text)
-        spannable.setSpan(
-                AbsoluteSizeSpan(200, true),
-                6, 7,
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        spannable.setSpan(
-                AbsoluteSizeSpan(200, true),
-                8, 9,
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 //        spannable.setSpan(
-//                CustomLineHeightSpan(100.dp),
-//                0, text.length,
+//                AbsoluteSizeSpan(200, true),
+//                6, 7,
 //                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+//        spannable.setSpan(
+//                AbsoluteSizeSpan(200, true),
+//                8, 9,
+//                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(
+                CustomLineHeightSpan(100.dp),
+                0, 8,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         return spannable
     }
 }

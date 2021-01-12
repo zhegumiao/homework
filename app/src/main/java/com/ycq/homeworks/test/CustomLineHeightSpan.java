@@ -72,6 +72,9 @@ public class CustomLineHeightSpan implements LineHeightSpan {
             return;
         }
         final float ratio = mHeight * 1.0f / originHeight;
+        // 这里的意思是 CharacterStyle （AbsoluteSizeSpan）和 lineHeight 选择较高的那个
+        // 另外也有完全只尊重 CharacterStyle 的情况
+        if (ratio < 1) return;
         fm.descent = Math.round(fm.descent * ratio);
         fm.ascent = fm.descent - mHeight;
     }

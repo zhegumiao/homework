@@ -7,6 +7,7 @@
     android:background="@color/color_gray"
     android:orientation="vertical"
     >
+<!--  android:textSize="208px" 其实是刚好算出 ascent 与 descent 之间为 275px -->
    <com.ycq.homeworks.views.TextView
        android:id="@+id/text"
        android:textSize="208px"

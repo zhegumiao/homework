@@ -1,14 +1,10 @@
 package com.ycq.homeworks.test
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.AbsoluteSizeSpan
-import android.text.style.BackgroundColorSpan
-import android.text.style.LineHeightSpan
-import android.text.style.QuoteSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -51,11 +47,12 @@ class TextViewParagraphSpaceFragment : Fragment() {
 
     private lateinit var textView: TextView
     private val testString = "aaa\nbbb\nccc\nddd"
-//    private val testString = "aaa\n\nbbb\n\nccc\n\nddd"
+
+    //    private val testString = "aaa\n\nbbb\n\nccc\n\nddd"
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textView = view.findViewById<TextView>(R.id.text)
-        val paragraphSpace = paragraphSpace(testString, 100)
+//        val paragraphSpace = paragraphSpace(testString, 100)
 //        textView.text = paragraphSpace.apply {
 //            setSpan(
 //                    CustomLineHeightSpan(100.dp),
@@ -63,6 +60,7 @@ class TextViewParagraphSpaceFragment : Fragment() {
 //                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 //        }
         textView.text = setSpan()
+
     }
 
 
@@ -79,10 +77,11 @@ class TextViewParagraphSpaceFragment : Fragment() {
 //                AbsoluteSizeSpan(200, true),
 //                8, 9,
 //                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        spannable.setSpan(
-                CustomLineHeightSpan(100.dp),
-                0, 8,
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+//        spannable.setSpan(
+//            CustomLineHeightSpan(100.dp),
+//            0, text.length,
+//            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+//        )
         return spannable
     }
 }

@@ -9,7 +9,8 @@ internal class TestLint {
 
     fun testFun(@TestClassName value: Int) {}
     fun init() {
-        // warning: not working in kotlin
+        // 编译时不会又 warning 提示
+        // 但是这里直接运行 lint 时会不通过
         testFun(5)
     }
 

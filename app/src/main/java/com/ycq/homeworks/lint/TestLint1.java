@@ -22,6 +22,7 @@ class TestLint1 {
 
     void init() {
 //        testFun(1);
+        // 这个直接编译时就会提示错误信息。
         testFun(TestLint1.V1);
     }
 }

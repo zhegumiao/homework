@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ycq.homeworks.R
 import com.ycq.homeworks.recyclerview.GoodSnapHelper
 import com.ycq.homeworks.util.dp
+import com.ycq.homeworks.util.dpInt
 
 /**
  *
@@ -32,7 +33,7 @@ class SnapHelperFragment : Fragment() {
         return inflater.inflate(R.layout.frag_snap_helper, container, false)
     }
 
-    private var snapHelper = GoodSnapHelper(FastOutSlowInInterpolator())
+    private var snapHelper = GoodSnapHelper(FastOutSlowInInterpolator()).apply { align = GoodSnapHelper.ALIGN_LEFT }
     private lateinit var list: RecyclerView
 
     // 这几个感觉不出差别
@@ -45,7 +46,7 @@ class SnapHelperFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         list = view.findViewById<RecyclerView>(R.id.list).apply {
             layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
-            adapter = ColorAdapter(20)
+            adapter = ColorAdapter(20, 200.dpInt)
             snapHelper.attachToRecyclerView(this)
         }
         view.setOnClickListener {
@@ -94,11 +95,11 @@ class SnapHelperFragment : Fragment() {
 
 }
 
-class ColorAdapter(private val itemCount_: Int) : RecyclerView.Adapter<ViewHolder>() {
+class ColorAdapter(private val itemCount_: Int, val w: Int) : RecyclerView.Adapter<ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val textView = TextView(parent.context).apply {
             layoutParams = ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
+                w,
                 ViewGroup.LayoutParams.MATCH_PARENT
             )
             textSize = 40.dp

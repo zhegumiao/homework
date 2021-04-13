@@ -4,9 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".MainActivity">
 
     <com.ycq.homeworks.draw.views.ValuesSelectView
+=======
+    tools:context=".MainActivity"
+    android:background="@color/color_gray"
+    >
+    <com.ycq.homeworks.draw.class22ScalableImageView.ScalableImageMatrixView
+>>>>>>> 3566122 (Finished ScalableImageView with matrix)
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@id/button"

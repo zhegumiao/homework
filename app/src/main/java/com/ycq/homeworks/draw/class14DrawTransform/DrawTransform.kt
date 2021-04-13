@@ -74,17 +74,32 @@ class DrawTransform(context: Context?, attrs: AttributeSet?) :
     }
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-//        translateAndScale(canvas)
+        translateAndScale(canvas)
 //        skew(canvas)
 //        rotateCamera(canvas)
-        rotateCameraCanvasClip(canvas)
+//        rotateCameraCanvasClip(canvas)
 
     }
     private fun translateAndScale(canvas: Canvas){
         canvas.save()
-        canvas.translate(centerX, centerY)
-        canvas.scale(1.5f, 1.5f)
-        canvas.drawBitmap(bitmap, 0f, 0f, paint)
+//        canvas.translate(centerX, centerY)
+//        canvas.scale(1.5f, 1.5f)
+//        canvas.drawBitmap(bitmap, 0f, 0f, paint)
+
+
+//        canvas.translate(0f, 50f)
+//        paint.color = Color.BLACK
+//        canvas.drawRect(700f, 0f, 800f, 100f, paint)
+//        canvas.scale(2f, 2f)
+        paint.color = Color.BLACK
+        canvas.drawRect(200f, 0f, 300f, 100f, paint)
+        // 这些 canvas 的变换，可以理解为直到 draw 之后才生效
+        canvas.translate(50f, 0f)
+        canvas.scale(2f, 2f, 0f, 0f)
+        paint.color = Color.RED
+        canvas.drawRect(0f, 0f, 100f, 100f, paint)
+
+
         canvas.restore()
     }
 

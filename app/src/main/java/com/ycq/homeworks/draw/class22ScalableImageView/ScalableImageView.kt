@@ -8,16 +8,16 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.GestureDetector
 import android.view.MotionEvent
-import android.view.View
 import android.widget.OverScroller
 import com.ycq.homeworks.util.dpInt
 import com.ycq.homeworks.util.getAvatar
+import com.ycq.homeworks.views.MyView
 
 /**
  *
  */
 class ScalableImageView constructor(context: Context, attrs: AttributeSet?) :
-        View(context, attrs) {
+        MyView(context, attrs) {
     private val bitmap = getAvatar(50.dpInt)
     val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
@@ -149,6 +149,7 @@ class ScalableImageView constructor(context: Context, attrs: AttributeSet?) :
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        canvas.save()
         // scale = smallScale + (bigScale - smallScale) * fraction
         val fraction = (scale - smallScale) / (bigScale - smallScale)
 
@@ -160,6 +161,7 @@ class ScalableImageView constructor(context: Context, attrs: AttributeSet?) :
         // 这里固定中心点是因为，offset 之后的边界会更好算。
         canvas.scale(scale, scale, centerX.toFloat(), centerY.toFloat())
         canvas.drawBitmap(bitmap, bitmapLeft.toFloat(), bitmapTop.toFloat(), paint)
+        canvas.restore()
     }
 
 }

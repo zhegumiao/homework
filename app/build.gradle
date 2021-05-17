@@ -24,6 +24,15 @@ android {
     }
 }
 
+class pluginDemo implements Plugin<Project> {
+
+    @Override
+    void apply(Project target) {
+
+    }
+}
+
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

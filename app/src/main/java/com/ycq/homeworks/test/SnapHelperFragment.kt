@@ -33,7 +33,7 @@ class SnapHelperFragment : Fragment() {
         return inflater.inflate(R.layout.frag_snap_helper, container, false)
     }
 
-    private var snapHelper = GoodSnapHelper(FastOutSlowInInterpolator()).apply { align = GoodSnapHelper.ALIGN_LEFT }
+    private var snapHelper = GoodSnapHelper(FastOutSlowInInterpolator()).apply { align = GoodSnapHelper.ALIGN_CENTER }
     private lateinit var list: RecyclerView
 
     // 这几个感觉不出差别
